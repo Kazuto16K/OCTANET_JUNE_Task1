@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/4b7f643936.js" crossorigin="anonymous"></script>
+    <title>Moviestop</title>
+</head>
+<body>
+    <header style="box-shadow: 0 5px 10px rgba(245, 222, 179, 0.2);">
+        <a href="#" class="logo">
+            <i class="fa-solid fa-video"></i><div class="text">MovieStop</div>
+        </a>
+        <div class="menu">
+            <div class="btn">
+                <i class="fa fa-times close-btn"></i>
+            </div>
+            <a href="#">Home</a>
+            <a href="#">SERIES</a>
+            <a href="#">MOVIES</a>
+            <a href="#" class="primary-btn">LOGIN</a>
+            <a href="#" class="secondary-btn"><i class="fa-regular fa-user"></i> Profile</a>            
+        </div>
+        <div class="btn">
+            <i class="fa-solid fa-bars menu-btn" style="color: white;"></i>
+        </div>
+    </header>
+
+    <div class="container" style="margin-top: 15vh; flex-direction: row-reverse;">
+        <div class="right-text">
+         <h2 class="heading">MOVIESTOP</h2>
+         <p class="subheading">Moviestop is your ultimate destination for movie reviews and ratings. Stay updated with the newest movies hitting theaters and explore our curated list of must-watch films. Whether you're a casual viewer or a cinephile, Moviestop offers insightful content to enhance your movie-watching experience.
+             <br><br><br><a href="#" class="secondary-btn" style="text-decoration: none;">Get Started <i class="fa-solid fa-right-long"></i> </a></p>
+        </div>
+ 
+        <div class="gallery ">
+         <div class="box col-2" id="box-1" style="background-image: url(./images/modern-family.jpg);">Modern Family</div>
+         <div class="box row-2" id="box-2" style="background-image: url(./images/ozark.jpg);">Ozark</div>
+         <div class="box row-2" id="box-3" style="background-image: url(./images/better_call_saul.jpg);">better Call Saul</div>
+         <div class="box " id="box-4" style="background-image: url(./images/peaky_blinders.jpg);">Peaky Blinders</div>
+         <div class="box row-2" id="box-5" style="background-image: url(./images/breaking_bad.jpg);">Breaking Bad</div>
+         <div class="box " id="box-6" style="background-image: url(./images/vinland_saga.jpg);"> vinland Saga</div>
+         <div class="box" id="box-7" style="background-image: url(./images/friends.jpg);">Friends</div>
+         <div class="box " id="box-8" style="background-image: url(./images/oppenheimer.jpg);">Oppenheimer</div>
+        </div>
+     </div>
+
+     <div class="partners-container">
+        <div class="heading">
+            OUR TRUSTED PARTNERS
+        </div>
+
+        <div class="logos">
+            <img class="logo-2" src="./images/netflix.png" alt="">
+            <img class="logo-2" src="./images/imdb.png" alt="">
+            <img class="logo-2" src="./images/prime.png" alt="">
+            <img class="logo-2" src="./images/rakuten.png" alt="">
+            <img class="logo-2" src="./images/hotstar.png" alt="">
+            <img class="logo-2" src="./images/sony-liv.png" alt="">
+        </div>
+    </div>
+
+    
+    <div class="container big-feature-container">
+        <div class="feature-img">
+            <img src="./images/tbbt.jpg" alt="">
+        </div>
+        <div class="feature-desc flex">
+            <h2>WATCH ANY SERIES ON THE GO</h2>
+            <h3>Enjoy your favorite series anytime, anywhere with our seamless on-the-go streaming. Whether you're commuting, traveling, or relaxing at home, dive into a world of cinematic magic right from your device. Experience high-quality viewing and an extensive library at your fingertips with Moviestop</h3>
+            <a href="" class="secondary-btn" style="text-decoration: none;">Browse Series <i class="fa-solid fa-right-long"></i></a>
+        </div>
+    </div>
+
+    <div class="container big-feature-container" style="flex-direction: row-reverse;">
+        <div class="feature-img">
+            <img src="./images/capt-america.jpg" alt="">
+        </div>
+        <div class="feature-desc">
+            <h2>WATCH ANY MOVIES ON THE GO</h2>
+            <h3>Enjoy your favorite movies anytime, anywhere with our seamless on-the-go streaming. Whether you're commuting, traveling, or relaxing at home, dive into a world of cinematic magic right from your device. Experience high-quality viewing and an extensive library at your fingertips with Moviestop</h3>
+            <a href="" class="secondary-btn" style="text-decoration: none;">Browse Movies <i class="fa-solid fa-right-long"></i></a>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="cta-container cta-section-container">
+            <h2>Start using today</h2>
+            <p>Get Subscription At The Cheapest Rates</p>
+            <a href="#" class="secondary-btn" style="text-decoration: none;">Get Started</a>
+        </div>
+    </section>
+
+    <div class="sub-footer">
+        <div class="subfooter-container">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Security Information</a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
+    <script>
+        window.addEventListener("scroll", function(){
+            var header = document.querySelector("header");
+            header.classList.toggle('sticky', window.scrollY>0)
+        });
+
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click",()=>{
+            menu.classList.add('active');
+        });
+
+        closeBtn.addEventListener("click", ()=>{
+            menu.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
